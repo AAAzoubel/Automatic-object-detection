@@ -60,3 +60,12 @@ project/
 ├── uploads/             # Uploaded videos
 ├── outputs/             # Generated results
 └── README.md
+
+▶️ How to Run
+1. Install dependencies
+pip install fastapi uvicorn ultralytics opencv-python pandas openpyxl
+2. Run the API
+uvicorn api:app --reload
+3. Access the system
+API Docs: http://127.0.0.1:8000/docs
+Web Interface: http://127.0.0.1:8000/ui
