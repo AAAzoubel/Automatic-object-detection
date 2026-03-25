@@ -1,46 +1,30 @@
+
 # 🚀 AI-Powered Video Analytics System
 
-A complete end-to-end video processing pipeline built with Computer Vision, AI, and Backend Engineering.
+End-to-end video processing pipeline using Computer Vision, AI, and Backend Engineering.
 
-This project goes beyond object detection — it transforms raw video into structured, usable data for analysis.
-
----
-
-## 🎯 Features
-
-- 🎥 Object detection using YOLOv8  
-- 🔄 Object tracking across frames (unique IDs)  
-- ⚙️ FastAPI backend for video processing  
-- 📊 Structured outputs (JSON, CSV, Excel)  
-- 🌐 Simple web interface for interaction  
-- 🎬 Annotated output video generation  
+This project goes beyond object detection — it transforms raw video into structured, usable data.
 
 ---
 
-## 🧠 Key Concept
+## 🎥 Demo
 
-One of the main challenges addressed in this project is **tracking consistency**:
-
-> Ensuring that the same object is not counted multiple times across frames.
-
-This is critical for turning raw detections into reliable data.
+![Demo](docs/demo.gif)  
+<!-- ou coloque um print se não tiver GIF -->
 
 ---
 
-## 🏗️ Architecture
+## 🔍 Features
 
-1. User uploads a video  
-2. Backend processes it frame-by-frame  
-3. YOLOv8 performs detection + tracking  
-4. Data is structured and stored  
-5. Outputs are generated:
-   - Annotated video  
-   - CSV / Excel files  
-   - JSON summary  
+- Object detection using YOLOv8  
+- Object tracking with persistent IDs (avoiding duplicate counts)  
+- FastAPI backend for video processing  
+- Structured outputs: JSON, CSV, Excel  
+- Basic web interface for interaction  
 
 ---
 
-## ⚙️ Tech Stack
+## 🧠 Tech Stack
 
 - Python  
 - FastAPI  
@@ -50,22 +34,45 @@ This is critical for turning raw detections into reliable data.
 
 ---
 
-## 📂 Project Structure
+## ⚙️ How It Works
+
+1. Upload a video  
+2. Process frame-by-frame  
+3. Detect and track objects  
+4. Generate structured outputs  
+5. Return results via API  
+
+---
+
+## 📁 Project Structure
+
+
+├── api.py
+├── object_detector.py
+├── requirements.txt
+├── README.md
+
+
+---
+
+## ▶️ How to Run
 
 ```bash
-project/
-│
-├── api.py                # FastAPI application
-├── object_detector.py   # Core detection & processing logic
-├── uploads/             # Uploaded videos
-├── outputs/             # Generated results
-└── README.md
+git clone https://github.com/AAAzoubel/Automatic-object-detection
+cd Automatic-object-detection
 
-▶️ How to Run
-1. Install dependencies
-pip install fastapi uvicorn ultralytics opencv-python pandas openpyxl
-2. Run the API
+pip install -r requirements.txt
+
 uvicorn api:app --reload
-3. Access the system
-API Docs: http://127.0.0.1:8000/docs
-Web Interface: http://127.0.0.1:8000/ui
+
+Then open:
+http://127.0.0.1:8000/ui
+
+🚧 Next Steps
+Database integration
+Real-time processing
+Performance optimization
+Docker containerization
+🤝 Contributing
+
+Feel free to fork and test locally. Feedback is always welcome!
