@@ -7,10 +7,7 @@ This project goes beyond object detection — it transforms raw video into struc
 
 ---
 
-## 🎥 Demo
 
-![Demo](docs/demo.gif)  
-<!-- ou coloque um print se não tiver GIF -->
 
 ---
 
